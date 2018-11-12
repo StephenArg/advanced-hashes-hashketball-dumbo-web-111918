@@ -54,9 +54,9 @@ def shoe_size(name)
   "Brendan Haywood"=>{number:"33",shoe:"15",points:"6",rebounds:"12",assists:"12",steals:"22",blocks:"5",slam_dunks:"12"}
     }}}
     if game[:home][:players][name]
-     shoe_size = game[:home][:players][name][:shoe_size]
+     shoe_size = game[:home][:players][name][:shoe]
     else
-     shoe_size = game[:away][:players][name][:shoe_size]
+     shoe_size = game[:away][:players][name][:shoe]
     end
     shoe_size.to_i
 end
