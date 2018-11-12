@@ -175,14 +175,14 @@ def big_shoe_rebounds
   home_big_foot = 0
   away_big_foot = 0
   game[:home][:players].each{|player, hash|
-  if hash[shoe] > home_big_foot
-    home_big_foot = hash[shoe]
+  if hash[:shoe] > home_big_foot
+    home_big_foot = hash[:shoe]
     home_big_foot_name = player
   end}
   game[:away][:players].each{|player, hash|
-  if hash[shoe] > away_big_foot
-    away_big_foot = hash[shoe]
+  if hash[:shoe] > away_big_foot
+    away_big_foot = hash[:shoe]
     away_big_foot_name = player
   end}
-  binding.pry 
+  binding.pry
 end
