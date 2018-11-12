@@ -184,5 +184,11 @@ def big_shoe_rebounds
     away_big_foot = hash[:shoe]
     away_big_foot_name = player
   end}
-  binding.pry
+  if home_big_foot > away_big_foot
+    rebounds = game[:home][:players][home_big_foot_name][:rebounds]
+    rebounds
+  else
+    rebounds = game[:away][:players][away_big_foot_name][:rebounds]
+    rebounds
+  end
 end
