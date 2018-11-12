@@ -1,3 +1,5 @@
+require 'pry'
+
 def game_hash
   game = {home: {team_name:"Brooklyn Nets", colors:["Black","White"],players:{
   "Alan Anderson"=>{number:"0",shoe:"16",points:"22",rebounds:"12",assists:"12",steals:"3",blocks:"1",slam_dunks:"1"},
@@ -101,5 +103,6 @@ def team_names
     }}}
   teams = []
   game.each {|i| i.each{|team| teams.push(team)}}
+  binding.pry
   teams
 end
