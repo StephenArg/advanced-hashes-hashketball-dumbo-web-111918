@@ -58,5 +58,5 @@ def shoe_size(name)
    else
      shoe_size = game[:away][:players][name][:shoe_size]
    end
-   shoe_size
+   shoe_size.to_i
 end
