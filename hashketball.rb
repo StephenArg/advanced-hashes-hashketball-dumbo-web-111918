@@ -55,8 +55,8 @@ def shoe_size(name)
     }}}
     if game[:home][:players][name]
      shoe_size = game[:home][:players][name][:shoe_size]
-   else
+    else
      shoe_size = game[:away][:players][name][:shoe_size]
-   end
-   shoe_size.to_i
+    end
+    shoe_size.to_i
 end
