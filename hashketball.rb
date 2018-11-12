@@ -30,10 +30,10 @@ def num_points_scored(name)
   "Ben Gordon"=>{number:"8",shoe:"15",points:"33",rebounds:"3",assists:"2",steals:"1",blocks:"1",slam_dunks:"0"},
   "Brendan Haywood"=>{number:"33",shoe:"15",points:"6",rebounds:"12",assists:"12",steals:"22",blocks:"5",slam_dunks:"12"}
     }}}
-  points = ""
-  game.each {|home_away|
-  if home_away[:players][name].exists?
-    points = home_away[:player][name]
-  end}
-  return point.to_i
+    if game[:home][:players][name]
+     points = game[:home][:players][name][:points]
+   else
+     points = game[:away][:players][name][:points]
+   end
+   points.to_i
 end
