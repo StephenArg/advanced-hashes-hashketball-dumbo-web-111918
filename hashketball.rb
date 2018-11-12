@@ -35,5 +35,5 @@ def num_points_scored(name)
   if home_away[:players][name].exists?
     points = home_away[:player][name]
   end}
-  points
+  return point.to_i
 end
