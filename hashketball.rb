@@ -149,9 +149,9 @@ def player_stats(name)
   "Brendan Haywood"=>{number:"33",shoe:"15",points:"6",rebounds:"12",assists:"12",steals:"22",blocks:"5",slam_dunks:"12"}
     }}}
   binding.pry
-  if game[:home][:player][name]
-    return game[:home][:player][name]
+  if game[:home][:players][name]
+    return game[:home][:players][name]
   else
-    return game[:away][:player][name]
+    return game[:away][:players][name]
   end
 end
