@@ -125,10 +125,10 @@ def player_numbers(team)
   numbers = []
   if game[:home][:team_name] == team
     game[:home][:players].each {|player, number|
-    numbers.push(number[:number])}
+    numbers.push((number[:number]).to_i)}
   else
     game[:away][:players].each {|player, number|
-    numbers.push(number[:number])}
+    numbers.push((number[:number]).to_i)}
   end
   return numbers
 end
