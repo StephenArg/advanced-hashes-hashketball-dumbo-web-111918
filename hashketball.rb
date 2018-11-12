@@ -124,7 +124,8 @@ def player_numbers(team)
     }}}
   numbers = []
   if game[:home][:team_name] == team
-    game[:home][:players].each {|player|
+    game[:home][:players].each {|player, number|
+      binding.pry
     numbers.push(player[:number])}
   else
     game[:away][:players].each {|player|
